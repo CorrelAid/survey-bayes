@@ -1,10 +1,12 @@
 [project]
-name = "umfrage-bayesed"
+name = "survey-bayes"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "arviz>=0.23.1",
+    "bambi>=0.16.0",
     "black>=26.1.0",
     "ipython>=9.9.0",
     "isort>=7.0.0",
