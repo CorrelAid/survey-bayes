@@ -1,7 +1,10 @@
-# %% [markdown] In diesem Tutorial wollen wir herausfinden ob es eine
-# Korrelation zwischen der Variable Wohlfühlen ("Ich
-# fühle mich bei TestWerk wohl und akzeptiert") und dem Net Promoter Score ("Würdest du Testwerk Freund*innen empfehlen") gibt.
-# Wohlfühlen messen wir auf einer Skala von 1 ("Stimme gar nicht zu") bis 5 ("Stimme voll zu") und den Net Promoter Score (NPS) von 0 bis 10.
+# %% [markdown]
+# # Korrelationen
+# In diesem Tutorial wollen wir herausfinden ob es eine Korrelation zwischen der
+# Variable Wohlfühlen ("Ich fühle mich bei TestWerk wohl und akzeptiert") und dem Net
+# Promoter Score ("Würdest du Testwerk Freund*innen empfehlen") gibt. Wohlfühlen messen
+# wir auf einer Skala von 1 ("Stimme gar nicht zu") bis 5 ("Stimme voll zu") und den Net
+# Promoter Score (NPS) von 0 bis 10.
 
 # %%
 import arviz as az
@@ -49,7 +52,7 @@ ax.set(
 
 # Auch wenn die Daten wenig Varianz aufzeigen, scheint es hier einen klaren, positiven
 # Zusammenhang zwischen den beiden Variablen zu geben. Wer sich wohler fühlt, neigt eher
-# dazu TestWerk weiter zu empfehlen, was ja auch nicht überraschend ist.
+# dazu TestWerk weiter zu empfehlen, was sich ja mit common sense deckt.
 
 
 # %% [markdown]
@@ -58,9 +61,9 @@ ax.set(
 # Zunächst brauchen wir ein statistisches Modell, das die beiden Variablen in Beziehung
 # setzt.
 #
-# In diesem Fall bietet sich ein lineares Modell an, das beschreibt, dass der
-# NPS Score ($n$) einer*s Teilnehmer*in sich aus dem Wert der Variable Wohlfühlen ($w$)
-# und zufälligem Rauschen ($\epsilon$) berechnen lässt.
+# In diesem Fall bietet sich ein lineares Modell an, das beschreibt, dass der NPS Score
+# ($n$) einer*s Teilnehmer*in sich aus dem Wert der Variable Wohlfühlen ($w$) und
+# zufälligem Rauschen ($\epsilon$) berechnen lässt.
 #
 # $n = \beta_0 + \beta_1 w + \epsilon$
 #
@@ -68,9 +71,9 @@ ax.set(
 # $\beta_0$, dem Wohlfühl Effekt $\beta_1 w$ und einem zufälligen Rauschen $\epsilon$.
 # Die Werte pro Teilnehmer*in für $n$ und $w$ kennen wir aus unseren Daten. Die
 # Variablen $\beta_0$ und $beta_1$ kennen wir nicht. Wir wollen deren Werte
-# herausfinden. Da wir diese Werte in unserem kleinen Datensatz von 100 Teilnehmer*innen
-# nicht mit Sicherheit bestimmen können, bekommen wir eine Schätzung dazu welche dieser
-# Werte wahrscheinlich sind. Das ist die Posterior Verteilung.
+# herausfinden. In unserem kleinen Datensatz von 100 Teilnehmer*innen können wir diese
+# Werte nicht mit Sicherheit bestimmen. Stattdessen bekommen wir eine Schätzung dazu
+# welche Werte wahrscheinlich sind. Das ist die Posterior Verteilung.
 #
 # Uns interessiert insbesondere der Wert $\beta_1$. Er beschreibt welchen Einfluss
 # Wohlfühlen auf den NPS Score hat.
