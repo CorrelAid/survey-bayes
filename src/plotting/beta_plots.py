@@ -46,7 +46,7 @@ plot_beta(
     alpha=20,
     beta_param=20,
     color="#2c7bb6",
-    label="Prior Beta(20, 20)",
+    label="Prior Verteilung",
     title="Prior-Verteilung über die Tendenz der Münze",
     save_path="figures/coin_prior_beta_20_20.png",
 )
@@ -57,7 +57,7 @@ plot_beta(
     alpha=39,
     beta_param=21,
     color="#1a9641",
-    label="Posterior Beta(39, 21)",
+    label="Posterior Verteilung",
     title="Posterior-Verteilung über die Tendenz der Münze",
     save_path="figures/coin_posterior_beta.png",
 )
