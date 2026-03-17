@@ -1,3 +1,5 @@
+Dieses Repository ist Teil der Umfrage-Werkstattbox des Civic Data Labs (ToDo: Link). In der Werkstattbox findet ihr Infos und Hilfestellungen rund um das Thema Umfragen - von der Konzeption bis zur Auswertung.
+
 # Statistische Auswertung von Umfragen mit Bayesscher Statistik
 
 Dieses Repository soll es Menschen mit Coding Vorerfahrung ermöglichen sich in Bayessche Statistik einzuarbeiten. Wir werden Beispiele aus dem Bereich Umfragen behandeln um die Konzepte zu erklären.
@@ -96,3 +98,9 @@ Long
 [^pWert]: Die korrekte Interpretation eines p-Werts ist: "Wie wahrscheinlich sind die gegebenen Daten oder noch extremere Daten unter der Annahme, dass die Nullhypothese wahr ist?" Wenn diese Wahrscheinlichkeit klein ist (üblicherweise unter 5%), dann wird die Nullhypothese abgelehnt. Eine direkte Aussage über die Wahrscheinlichkeit, dass die Nullhypothese falsch ist oder dass eine Alternativhypothese richtig ist, ist in der klassischen Statistik nicht möglich.
 
 [^dichte]: Wer genau hingeschaut hat, hat vielleicht gesehen, dass hier nicht die Wahrscheinlichkeit sondern die Wahrscheinlichkeitsdichte geplottet wurde. Bei kontinuerlichen Verteilungen ist das typischerweise der Fall. Jeder einzelne genaue Wert zwischen 0 und 1 ist extrem unwahrscheinlich. Was ist die Wahrscheinlichkeit, dass die Tendenz der Münze genau 0.44389209 ist? Genau 0. Sinnvolle Wahrscheinlichkeiten lassen sich bei kontinuierlichen Verteilungen nur für Intervalle angeben. Die Wahrscheinlichkeit, dass die Tendenz der Münze zwischen 0.4 und 0.6 liegt ist bei diesem Prior beispielsweise ca. 80%. Wahrscheinlichkeitsdichte lässt sich also gut plotten. Zu echten Wahrscheinlichkeiten kommt man wenn man die Dichte über ein Interval integriert.
+
+
+## KI Disclaimer
+Bei der Erstellung dieses Repositories haben wir Language Models genutzt und zwar für diese Aufgaben:
+- Doc Strings
+- Plotting Funktionen
