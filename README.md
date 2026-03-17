@@ -2,7 +2,7 @@ Dieses Repository ist Teil der Umfrage-Werkstattbox des Civic Data Labs (ToDo: L
 
 # Statistische Auswertung von Umfragen mit Bayesscher Statistik
 
-Dieses Repository soll es Menschen mit Coding Vorerfahrung ermöglichen sich in Bayessche Statistik einzuarbeiten. Wir werden Beispiele aus dem Bereich Umfragen behandeln um die Konzepte zu erklären.
+Dieses Repository soll es Menschen mit Coding Vorerfahrung ermöglichen sich in Bayessche Statistik einzuarbeiten. Das notwendige mathematisches Vorwissen zu Wahrscheinlichkeitken wird wiederholt, kann hier aber nicht in vollem Umfang behandelt werden. Wir werden Beispiele aus dem Bereich Umfragen behandeln um die Konzepte zu erklären. 
 
 ## Wie funktioniert Bayessche Statistik?
 
@@ -30,7 +30,7 @@ Werte um 0.5 werden hier als sehr viel wahrscheinlicher modeliert als extreme We
 ## Bayessches Updating
 Wir haben diese Wahrscheinlichkeitsverteilung gerade genutzt um unsere Vermutung über eine Münze zusammen zu fassen bevor wir Daten über sie gesammelt haben. Nun stellen wir uns vor wir werfen die Münze 20 mal und schreiben auf wie oft sie Kopf oder Zahl zeigt. Mit diesen 20 Datenpunkten können wir uns nun an das Bayessche Aktualisieren unsere a priori Vermutung wagen und zu einem a posteriori Wissensstand gelangen.
 
-Mal angenommen von den 20 Würfen zeigte die Münze 19 mal Kopf. Huch, vielleicht ist das doch gar keine faire Münze. Vielleicht ist sie auf Kopf gezinkt. Bayessche Statistik erlaubt es uns unsere initiale Vermutung über die Münze mathematisch exakt zu aktualisieren. Es gibt genau einen mathematisch-rationalen Weg die Daten über diese Münze und unsere Prior Vermutungen zusammen zu bringen und bei einer Posterior Verteilung zu landen. Diese beschreibt den (Un-)wissensstand, den ein mathematisch-rationaler Zuschauer hat, der mit unserem Prior gestartet ist und die 19 von 20 mal Kopf gesehen hat.
+Mal angenommen von den 20 Würfen zeigte die Münze 19 mal Kopf. Huch, vielleicht ist das doch gar keine faire Münze. Vielleicht ist sie auf Kopf gezinkt. Bayessche Statistik erlaubt es uns unsere initiale Vermutung über die Münze mathematisch exakt zu aktualisieren. Es gibt genau einen mathematisch-rationalen Weg die Daten über diese Münze und unsere Prior Vermutungen zusammen zu bringen und bei einer Posterior Verteilung zu landen. Diese beschreibt den (Un-)wissensstand, den ein mathematisch-rationaler Zuschauer hat, der mit unserem Prior gestartet ist und bei 19 von 20 Würfen Kopf gesehen hat.
 
 ![A-posteriori-Verteilung über die Tendenz der Münze nach 19 Kopf](figures/coin_posterior_beta.png)
 
@@ -40,7 +40,7 @@ Wir haben 19/20 mal Kopf gesehen und dennoch ist die Wahrscheinlichkeit, für ei
 
 
 ### Statistik und Prior-Auswahl
-Im statistischen Kontext möchten wir oft von einem neutralen a priori Wissensstand ausgehen, der nur völlig unplausible Werte ausschließt. Wir wollen schließlich einen unvoreingenommenen Blick auf die Daten werfen.
+Bayessches Updating erlaubt es sein eigenes Vorwissen mit in die Auswertung einzubringen. In unserem Beispiel, waren wir uns a priori recht sicher, dass die Münze fair ist. Im statistischen Kontext möchten wir allerdings meistens von einem neutralen a priori Wissensstand ausgehen, der nur völlig unplausible Werte ausschließt. Wir wollen schließlich einen unvoreingenommenen Blick auf die Daten werfen.
 Ein Beispiel: Wir wollen anhand von Daten herausfinden wie hoch der Anteil an Vereinsmitgliedern sein wird, die zum Sommerfest kommen.
 Ein absolut neutraler Prior würde jedem Anteilsverhältnis zwischen 0 und 1 die gleiche Wahrscheinlichkeit geben bevor wir die Daten (zum Beispiel aus einer Umfrage) gesehen haben. Dass niemand kommt, dass genau $\frac{2}{3}$ der Leute kommen und dass wirklich alle kommen wäre also unter diesem Prior exakt gleich wahrscheinlich. Da es schon sehr unwahrscheinlich ist, dass gar niemand oder wirklich alle kommen, könnte man hier auch einen Prior wählen der diese Extreme als etwas weniger wahrscheinlich modeliert und dafür mittlere Werte (0.5; also die Hälfte der Mitglieder kommt vorbei) als etwas wahrscheinlicher darstellt. So ein Prior heißt in der Fachsprache "weakly informative", also ein Prior der ein kleines bisschen Vorwissen mit einbaut. Das ist auch der empfohlene Weg in der Bayesschen Statistik einen Prior zu wählen und wir werden hier nur solche "weakly informative" Prior benutzen.
 
