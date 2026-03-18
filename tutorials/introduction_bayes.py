@@ -1,21 +1,15 @@
 # %% [markdown]
-# An introduction to Bayesian statistics for survey analysis.
-
-# Bayesian statistics
-# - Updating knowledge with data
+# # Erste Bayessche Auswertung
 #
-
-# Difference to and advantages over frequentist statistics
-# - Different interpretation of probability (long-run relative frequency vs. rational
-#   state of mind)
-# - Interpretability of results (no more p-values)
-# - Modeling freedom
-# - Hierarchical models can share statistical strenght across subgroups automatically
+# Analyse der Unsicherheit zu Ja/Nein (binären) Fragen. Bleiben wir bei dem Beispiel zum
+# Event im Verein. wir hätten die Umfrage Teilnehmer:innen gefragt ob sie an unserer
+# nächsten Veranstaltung teilnehmen wollen. Wir haben 20 zufällig ausgewählte Mitlgieder
+# befragt und 18/20 Teilnehmer:innen antworten, dass sie gern dabei seien wollen. Was
+# sagt uns das darüber aus welche Anteile an der Gesamtheit der (z.B. 1000) Mitglieder
+# plausibel dabei sein wollen?
 #
-
-# Disadvantages of Bayes
-# - Problems with communicating to stakeholders who know only frequentist statistics
-# - Higher computational effort
+# Wir können an diesem Beispiel in der Praxis sehen wie man von einer Prior Verteilung
+# mit Daten zu einer Posterior Verteilung kommt.
 
 # %%
 import arviz as az
@@ -24,15 +18,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from scipy.special import expit
-
-# %%
-# Analyse der Unsicherheit zu Ja/Nein (oder generell binären) Fragen. Als Beispiel
-# können wir uns vorstellen wir hätten die Umfrage Teilnehmer*innen gefragt ob sie an
-# unserer nächsten Veranstaltung teilnehmen wollen. Wir haben 20 zufällig ausgewählte
-# Mitlgieder befragt und 18/20 Teilnehmer*innen antworten, dass sie gern dabei seien
-# wollen. Was sagt uns das darüber aus welche Anteile an der Gesamtheit der (z.B. 1000)
-# Mitglieder plausibel sind?
-
 
 # %%
 # Beispiel-Daten: Umfrage bei einem Verein "Würden Sie am Sommerfest
@@ -55,15 +40,23 @@ print(f"Umfrage-Ergebnis: {n_ja} von {n_befragte} würden teilnehmen")
 print(f"Beobachteter Anteil: {n_ja / n_befragte:.1%}\n")
 
 # %% [markdown]
-# Bambi ermöglicht es statistische Modelle mit einem String zu spezifizieren.
-# Wir modellieren die Variable teilnahme ohne Prädiktor Variablen, sondern nur
-# mit Intercept (~ 1). Da unsere predicted variable, nur 1 oder 0 annehmen kann
-# nutzen wir die Bernoulli Verteilung umd die Wahrscheinlichkeit für 1 zu
-# modellieren.
+# ### Bambi
+# Wir nutzen für Bayessche Statistik hier das Package Bambi. Bambi ermöglicht es
+# statistische Modelle mit einem String zu spezifizieren. Unsere Daten bestehen aus der
+# binären Variable "teilnahme" und wir wollen herausfinden welche Anteile an
+# Vereinsmitgliedern realistischerweise Ja sagen würden wenn wir statt den 20 alle 1000
+# befragen würden. Das ist aus mathematischer Sicht vergleichbar mit der Tendenz einer
+# Münze Kopf zu zeigen. Wir suchen also wie im Eingangsbeispiel nach einer Tendenz oder
+# einem Anteil. Anteile liegen wieder zwischen 0 und 1.
+#
+# Nun fehlt uns noch ein statistisches Modell um zu beschreiben wie wir uns vereinfacht
+# vorstellen wie die Daten, die wir gesammelt haben generiert wurden. Nahezu alle
+# statistischen Verfahren, ob klassisch oder Bayessch treffen solche Modellannahmen. In
+# der Bayesschen Statistik ist es sehr typisch diese Annahmen transparent darzustellen.
+#
 # $p(teilnahme) \sim logit(\beta_0)$
 
 # %%
-# TODO: Vielleicht als Einführung als allererstes mit pymc?
 model = bmb.Model("teilnahme ~ 1", df, family="bernoulli")
 
 # %%
