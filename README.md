@@ -52,8 +52,3 @@ Ein absolut neutraler Prior würde jedem Anteilsverhältnis zwischen 0 und 1 die
 
 [^dichte]: Wer genau hingeschaut hat, hat vielleicht gesehen, dass hier nicht die Wahrscheinlichkeit sondern die Wahrscheinlichkeitsdichte geplottet wurde. Bei kontinuerlichen Verteilungen ist das typischerweise der Fall. Jeder einzelne genaue Wert zwischen 0 und 1 ist extrem unwahrscheinlich. Was ist die Wahrscheinlichkeit, dass die Tendenz der Münze genau 0.44389209 ist? Genau 0. Sinnvolle Wahrscheinlichkeiten lassen sich bei kontinuierlichen Verteilungen nur für Intervalle angeben. Die Wahrscheinlichkeit, dass die Tendenz der Münze zwischen 0.4 und 0.6 liegt ist bei diesem Prior beispielsweise ca. 80%. Wahrscheinlichkeitsdichte lässt sich also gut plotten. Zu echten Wahrscheinlichkeiten kommt man wenn man die Dichte über ein Interval integriert.
 
-
-## KI Disclaimer
-Bei der Erstellung dieses Repositories haben wir Language Models genutzt und zwar für diese Aufgaben:
-- Doc Strings
-- Plotting Funktionen
