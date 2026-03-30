@@ -4,7 +4,7 @@ Parts of the code in this repository were written or refined with the assistance
 [Claude Code](https://claude.ai/code) (Anthropic). All AI-generated or AI-assisted code
 has been reviewed, tested, and is the responsibility of the human contributors to this
 project. In particular, AI assistance was used to create plotting functions, doc strings
-and as a sparring tool.
+and as a sparring tool. AI assistance was not used for tutorial texts, code, and content.
  
 ---
  
