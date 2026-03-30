@@ -1,4 +1,6 @@
-Dieses Repository ist Teil der Umfrage-Werkstattbox des Civic Data Labs (ToDo: Link). In der Werkstattbox findet ihr Infos und Hilfestellungen rund um das Thema Umfragen - von der Konzeption bis zur Auswertung.
+
+
+Dieses Repository ist Teil der [Umfrage-Werkstattbox](https://umfragen.civic-data.de/) des Civic Data Labs. In der Werkstattbox findet ihr Infos und Hilfestellungen rund um das Thema Umfragen - von der Konzeption bis zur Auswertung.
 
 # Statistische Auswertung von Umfragen mit Bayesscher Statistik
 
@@ -44,56 +46,6 @@ Bayessches Updating erlaubt es sein eigenes Vorwissen mit in die Auswertung einz
 Ein Beispiel: Wir wollen anhand von Daten herausfinden wie hoch der Anteil an Vereinsmitgliedern sein wird, die zum Sommerfest kommen.
 Ein absolut neutraler Prior würde jedem Anteilsverhältnis zwischen 0 und 1 die gleiche Wahrscheinlichkeit geben bevor wir die Daten (zum Beispiel aus einer Umfrage) gesehen haben. Dass niemand kommt, dass genau $\frac{2}{3}$ der Leute kommen und dass wirklich alle kommen wäre also unter diesem Prior exakt gleich wahrscheinlich. Da es schon sehr unwahrscheinlich ist, dass gar niemand oder wirklich alle kommen, könnte man hier auch einen Prior wählen der diese Extreme als etwas weniger wahrscheinlich modeliert und dafür mittlere Werte (0.5; also die Hälfte der Mitglieder kommt vorbei) als etwas wahrscheinlicher darstellt. So ein Prior heißt in der Fachsprache "weakly informative", also ein Prior der ein kleines bisschen Vorwissen mit einbaut. Das ist auch der empfohlene Weg in der Bayesschen Statistik einen Prior zu wählen und wir werden hier nur solche "weakly informative" Prior benutzen.
 
-
-
-An introduction to Bayesian statistics for survey analysis.
-
-Bayesian statistics
-- Updating knowledge with data
-
-
-Difference to and advantages over frequentist statistics
-- Different interpretation of probability (long-run relative frequency vs. rational
-  state of mind)
-- Interpretability of results (no more p-values)
-- Modeling freedom
-- Hierarchical models can share statistical strenght across subgroups automatically
-
-
-Disadvantages of Bayes
-- Problems with communicating to stakeholders who know only frequentist statistics
-- Higher computational effort
-
-## Was ist überhaupt (schließende) Statistik?
-
-## Wie wertet man Umfragen eigentlich statistisch aus?
-In diesem Repository gibt es Tutorials, die beispielhaft zeigen wie man Bayessche Statistik nutzen kann um Fragen zu beantworten wie z.B. "Wie wahrscheinlich ist die Korrelation zwischen zwei Umfrage Items positiv" oder "Wie stark unterscheiden sich die Gruppen in unserer Umfrage?"
-
-## Kurz Intro zu Bayes
-Bayessche Statistik ist ein immer populärer werdender Zweig der Statistik mit Vorteilen gegenüber klassischer Statistik.
-
-### Interpretierbare Auswertung
-Die Auswertungen können direkt Fragen zu Hypothesen beantworten, wie beispielsweise "Wie wahrscheinlich ist es, dass Gruppe A einen höheren Wert aufweist als Gruppe B?". Klassische Statistik arbeitet hier oft mit p-Werten. Diese sind sehr nützlich, aber schwer zu interpretieren[^pWert]
-
-
-### Wie funktioniert Bayes?
-
-
-### Vergleich zu klassischer Statistik
-
-### Nachteile von Bayes
-
-### Bayesscher workflow
-Model definieren
-Prior predictive check
-Model fitten
-Check von MCMC Approximation
-Posterior predictive check
-Auswertung des posteriors (credible intervals, posterior of direction etc.)
-
-
-## Data format
-Long 
 
 [^pWert]: Die korrekte Interpretation eines p-Werts ist: "Wie wahrscheinlich sind die gegebenen Daten oder noch extremere Daten unter der Annahme, dass die Nullhypothese wahr ist?" Wenn diese Wahrscheinlichkeit klein ist (üblicherweise unter 5%), dann wird die Nullhypothese abgelehnt. Eine direkte Aussage über die Wahrscheinlichkeit, dass die Nullhypothese falsch ist oder dass eine Alternativhypothese richtig ist, ist in der klassischen Statistik nicht möglich.
 
