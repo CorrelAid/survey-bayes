@@ -1,7 +1,7 @@
 [![AI-Assisted](https://img.shields.io/badge/AI--assisted-Claude%20Code-blueviolet?logo=anthropic&logoColor=white)](./AI_DISCLOSURE.md)
 
 
-Dieses Repository ist Teil der [Umfrage-Werkstattbox](https://umfragen.civic-data.de/) des Civic Data Labs. In der Werkstattbox findet ihr Infos und Hilfestellungen rund um das Thema Umfragen - von der Konzeption bis zur Auswertung.
+Dieses Repository ist Teil der [Umfrage-Werkstattbox](https://umfragen.civic-data.de/) des Civic Data Labs. In der Werkstattbox findet ihr Infos und Hilfestellungen rund um das Thema Umfragen - von der Konzeption bis zur Auswertung. Das Repository ist aktuell noch work in progress.
 
 # Statistische Auswertung von Umfragen mit Bayesscher Statistik
 
